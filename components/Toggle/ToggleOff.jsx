@@ -1,7 +1,8 @@
 import React from "react"
 import { ToggleContext } from "./Toggle"
 
-export default function ToggleOn({ children }) {
+export default function ToggleOff({ children }) {
     const { on } = React.useContext(ToggleContext)
-    return on ? children : null
+    
+    return on ? null : children
 }

@@ -3,5 +3,6 @@ import { ToggleContext } from "./Toggle"
 
 export default function ToggleOn({ children }) {
     const { on } = React.useContext(ToggleContext)
-    return on ? null : children
+    
+    return on ? children : null
 }
