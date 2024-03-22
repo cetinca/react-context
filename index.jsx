@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Menu from "./components/Menu/index"
 import Star from "./components/Star"
+import Toggle from "./components/Toggle/index"
+
 
 function App() {
   return (
@@ -17,6 +19,15 @@ function App() {
           <Menu.Item>Blog</Menu.Item>
         </Menu.Dropdown>
       </Menu>
+      <Toggle>
+        <Toggle.Button>
+          <Toggle.Display>
+            {(on) => {
+              return <div className={`box ${on ? "filled" : ""}`}></div>
+            }}
+          </Toggle.Display>
+        </Toggle.Button>
+      </Toggle>
     </>
   )
 }
